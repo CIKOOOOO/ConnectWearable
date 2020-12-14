@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.wear.widget.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlueBCA"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.login.authenticate.AuthenticateActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_01"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="@dimen/size_for_100dp"
+            android:layout_height="@dimen/size_for_70dp"
+            android:background="@drawable/icon_logo_pure" />
+
+        <TextView
+            android:id="@+id/tv_01"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_01"
+            android:layout_width="wrap_content"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:text="@string/input_authenticate"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_for_12sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/et_authenticate_code"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_for_10dp"
+            android:background="@drawable/rectangle_5dp_rounded_white"
+            android:inputType="number"
+            android:maxLength="6"
+            android:padding="@dimen/size_for_5dp"
+            tools:text="123456"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/btn_finish_login"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:text="@string/finish"
+            android:textAllCaps="false"
+            android:textColor="@color/colorBlueBCA"
+            android:textStyle="bold" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.wear.widget.BoxInsetLayout>

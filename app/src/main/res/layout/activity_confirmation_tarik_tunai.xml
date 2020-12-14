@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_palette"
+    tools:context=".ui.tariktunai.confirmation.ConfirmationTarikTunai">
+
+    <TextView
+        android:id="@+id/tv_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_for_20dp"
+        android:text="@string/confirmation"
+        android:textAllCaps="true"
+        android:textColor="@color/black_palette"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_for_100dp"
+        android:layout_marginTop="@dimen/size_for_10dp"
+        android:layout_marginEnd="@dimen/size_for_100dp"
+        android:background="@drawable/rectangle_rounded_stroke_black"
+        android:orientation="vertical"
+        android:padding="@dimen/size_for_10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_01">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/from_account_number"
+            android:textColor="@color/blue_palette"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5271517891"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_nominal_tarik_tunai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_for_30dp"
+        android:textColor="@color/black_palette"
+        android:textSize="@dimen/size_for_25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_01"
+        tools:text="100,000" />
+
+    <TextView
+        android:id="@+id/tv_02"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_for_70dp"
+        android:layout_marginTop="@dimen/size_for_20dp"
+        android:layout_marginEnd="@dimen/size_for_70dp"
+        android:text="@string/make_sure_saldo_available"
+        android:textAlignment="center"
+        android:textColor="@color/black_palette"
+        android:textSize="@dimen/size_for_17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_nominal_tarik_tunai" />
+
+    <CheckBox
+        android:id="@+id/cb_smartwatch_tariktunai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_for_10dp"
+        android:buttonTint="@color/blue_palette"
+        android:text="@string/pair_with_smartwatch"
+        app:layout_constraintStart_toStartOf="@id/tv_02"
+        app:layout_constraintTop_toBottomOf="@id/tv_02" />
+
+
+    <Button
+        android:id="@+id/btn_cancel_tarik_tunai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_for_10dp"
+        android:background="@color/blue_palette"
+        android:text="Cancel"
+        android:textColor="@color/white_palette"
+        app:layout_constraintStart_toStartOf="@id/tv_02"
+        app:layout_constraintTop_toBottomOf="@id/cb_smartwatch_tariktunai" />
+
+    <Button
+        android:id="@+id/btn_ok_tarik_tunai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_for_10dp"
+        android:background="@color/blue_palette"
+        android:text="OK"
+        android:textColor="@color/white_palette"
+        app:layout_constraintEnd_toEndOf="@id/tv_02"
+        app:layout_constraintTop_toBottomOf="@id/cb_smartwatch_tariktunai" />
+
+    <TextView
+        android:id="@+id/tv_result_tarik_tunai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_for_20dp"
+        android:layout_marginTop="@dimen/size_for_20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_ok_tarik_tunai" />
+</androidx.constraintlayout.widget.ConstraintLayout>

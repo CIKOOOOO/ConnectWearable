@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="@dimen/size_for_5dp">
+
+    <ImageView
+        android:id="@+id/img_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle_half_corner_blue"
+        android:padding="@dimen/size_for_5dp"
+        android:src="@drawable/icon_black_smartwatch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/recycler_tv_name_devices_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rectangle_half_stroke_rounded_blue"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/size_for_20dp"
+        tools:text="Oppo Smartwatch"
+        android:textColor="@color/black_palette"
+        android:textSize="@dimen/size_for_17sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/img_01"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/img_01"
+        app:layout_constraintTop_toTopOf="@id/img_01" />
+</androidx.constraintlayout.widget.ConstraintLayout>

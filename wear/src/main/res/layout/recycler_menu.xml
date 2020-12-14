@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/size_for_10dp"
+    android:background="@color/colorBlueBCA"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_baseline_adb_24" />
+
+    <TextView
+        android:id="@+id/recycler_tv_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/size_for_10dp"
+        android:text="Info Saldo"
+        android:textColor="@color/white_palette"
+        android:textSize="@dimen/size_for_12sp" />
+</LinearLayout>

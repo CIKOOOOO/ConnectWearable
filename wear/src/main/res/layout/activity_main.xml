@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.wear.widget.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlueBCA"
+    tools:context=".ui.main.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/size_for_10dp"
+        android:layout_marginTop="@dimen/size_for_10dp"
+        android:layout_marginEnd="@dimen/size_for_10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selamat datang,\nAndrew Abednego Gunawan"
+            android:textColor="@color/white_palette"
+            android:textSize="@dimen/size_for_12sp"
+            android:textStyle="bold" />
+
+        <androidx.wear.widget.WearableRecyclerView
+            android:id="@+id/recycler_main_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_for_10dp" />
+    </LinearLayout>
+</androidx.wear.widget.BoxInsetLayout>

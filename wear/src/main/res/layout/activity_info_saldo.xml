@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.wear.widget.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlueBCA"
+    tools:context=".ui.infosaldo.InfoSaldoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/size_for_10dp"
+            android:text="@string/info_saldo"
+            android:textColor="@color/white_palette"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_for_5dp"
+            android:layout_marginTop="@dimen/size_for_10dp"
+            android:text="@string/time"
+            android:textColor="@color/white_palette"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/tv_time_info_saldo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_for_5dp"
+            android:textColor="@color/white_palette"
+            android:textSize="@dimen/size_for_12sp"
+            tools:text="30/11 09:64:21" />
+
+        <TextView
+            android:id="@+id/tv_account_number_info_saldo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_for_5dp"
+            android:layout_marginTop="@dimen/size_for_5dp"
+            android:textColor="@color/white_palette"
+            android:textSize="@dimen/size_for_12sp"
+            tools:text="No. Rekening : 5271517891" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_for_5dp"
+            android:layout_marginTop="@dimen/size_for_20dp"
+            android:layout_marginEnd="@dimen/size_for_5dp"
+            android:background="@drawable/rectangle_5dp_rounded_white"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size_for_5dp"
+                android:layout_marginTop="@dimen/size_for_5dp"
+                android:text="@string/sisa_saldo"
+                android:textColor="@color/colorBlueBCA"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tv_sisa_saldo_info_saldo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size_for_5dp"
+                android:layout_marginBottom="@dimen/size_for_5dp"
+                android:textColor="@color/colorBlueBCA"
+                android:textStyle="bold"
+                tools:text="Rp 1000,000,000" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.wear.widget.BoxInsetLayout>

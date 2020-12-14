@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.4"
+        android:background="@android:color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/size_for_40dp"
+        android:layout_marginEnd="@dimen/size_for_40dp"
+        android:background="@drawable/rectangle_rounded_stroke_black"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_for_30dp"
+            android:layout_marginTop="@dimen/size_for_20dp"
+            android:layout_marginEnd="@dimen/size_for_30dp"
+            android:layout_marginBottom="@dimen/size_for_20dp"
+            android:text="@string/warning_info_remove"
+            android:textAlignment="center"
+            android:textColor="@color/black_palette"
+            android:textSize="@dimen/size_for_20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_yes_remove_dialog"
+            style="@style/ButtonBase"
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/size_for_10dp"
+            android:background="@drawable/rectangle_rounded_blue"
+            android:paddingTop="@dimen/size_for_10dp"
+            android:paddingBottom="@dimen/size_for_10dp"
+            android:text="@string/yes"
+            android:textColor="@color/white_palette" />
+
+        <Button
+            android:id="@+id/btn_no_remove_dialog"
+            style="@style/ButtonBase"
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/size_for_10dp"
+            android:layout_marginEnd="@dimen/size_for_10dp"
+            android:layout_marginBottom="@dimen/size_for_10dp"
+            android:background="@drawable/rectangle_rounded_stroke_blue"
+            android:paddingTop="@dimen/size_for_10dp"
+            android:paddingBottom="@dimen/size_for_10dp"
+            android:text="@string/no"
+            android:textColor="@color/colorBlueBCA" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

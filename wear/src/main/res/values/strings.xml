@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Wear</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+
+    <string name="transaction_code">Kode Transaksi</string>
+    <string name="swap_transaction_code">Swap untuk melihat kode transaksi</string>
+    <string name="login">Login</string>
+    <string name="next">Selanjutnya</string>
+    <string name="input_card_number">Input 16 digit nomor kartu</string>
+    <string name="error_login_card">Input kartu harus 16 digit</string>
+    <string name="login_to_access">Login untuk mengakses menu SmartBCA</string>
+    <string name="finish">Selesai</string>
+    <string name="input_authenticate">Masukkan kode autentikasi dari aplikasi m-BCA</string>
+    <string name="ok">OK</string>
+    <string name="info_saldo">Info Saldo</string>
+    <string name="time">Waktu:</string>
+    <string name="sisa_saldo">Sisa Saldo:</string>
+
+    <string name="pref_file">pref_file</string>
+    <string name="pref_login_status">pref_login_status</string>
+    <string name="pref_user_id">user_id</string>
+    <string name="pref_smartphone_nodes_id">smartphone_nodes_id</string>
+
+    <string name="hello_world">Hello Square World!</string>
+</resources>

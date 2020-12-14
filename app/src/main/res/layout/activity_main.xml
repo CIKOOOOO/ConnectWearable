@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_screen_main_bca"
+    android:orientation="vertical"
+    tools:context=".ui.main.MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:background="@color/black_palette"
+        android:alpha="0.5"
+        android:layout_height="match_parent"/>
+
+    <Button
+        android:id="@+id/btn_tarik_tunai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_for_10dp"
+        android:text="Tarik tunai"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_smart_bca"
+        app:layout_constraintTop_toTopOf="@+id/btn_smart_bca" />
+
+    <Button
+        android:id="@+id/btn_smart_bca"
+        android:layout_width="@dimen/size_for_70dp"
+        android:layout_height="@dimen/size_for_70dp"
+        android:layout_marginEnd="108dp"
+        android:layout_marginBottom="152dp"
+        android:background="@drawable/img_smart_bca"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/send_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send Data"
+        android:visibility="gone" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_for_5dp"
+        android:text="SmartBCA"
+        android:textAlignment="center"
+        android:textColor="@color/white_palette"
+        android:textSize="@dimen/size_for_12sp"
+        app:layout_constraintEnd_toEndOf="@id/btn_smart_bca"
+        app:layout_constraintStart_toStartOf="@id/btn_smart_bca"
+        app:layout_constraintTop_toBottomOf="@id/btn_smart_bca" />
+</androidx.constraintlayout.widget.ConstraintLayout>

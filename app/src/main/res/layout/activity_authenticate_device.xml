@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.smartbca.registdevice.authenticatedevice.AuthenticateDeviceActivity">
+
+    <include
+        android:id="@+id/toolbar_common"
+        layout="@layout/toolbar_common" />
+
+    <TextView
+        android:id="@+id/tv_01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_for_40dp"
+        android:text="@string/authenticate_code"
+        android:textAlignment="center"
+        android:textColor="@color/black_palette"
+        android:textSize="@dimen/size_for_17sp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_common" />
+
+    <TextView
+        android:id="@+id/tv_authenticate_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_for_20dp"
+        tools:text="672405"
+        android:textAlignment="center"
+        android:textColor="@color/black_palette"
+        android:textSize="@dimen/size_for_40sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tv_01" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_for_70dp"
+        android:layout_marginTop="@dimen/size_for_20dp"
+        android:layout_marginEnd="@dimen/size_for_70dp"
+        android:text="@string/authenticate_code_warning"
+        android:textAlignment="center"
+        android:textColor="@color/black_palette"
+        app:layout_constraintTop_toBottomOf="@id/tv_authenticate_code" />
+
+    <Button
+        android:id="@+id/btn_back_authenticate"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_for_60dp"
+        android:layout_marginStart="@dimen/size_for_20dp"
+        android:layout_marginTop="@dimen/size_for_40dp"
+        android:layout_marginEnd="@dimen/size_for_20dp"
+        android:layout_marginBottom="@dimen/size_for_40dp"
+        android:background="@drawable/rectangle_rounded_blue"
+        android:paddingTop="@dimen/size_for_10dp"
+        android:paddingBottom="@dimen/size_for_10dp"
+        android:text="@string/back"
+        android:textAllCaps="false"
+        android:textColor="@color/white_palette"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

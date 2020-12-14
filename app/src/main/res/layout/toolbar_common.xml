@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size_for_70dp"
+    android:background="@color/wild_sand_palette"
+    android:elevation="@dimen/size_for_5dp">
+
+    <Toolbar
+        android:id="@+id/toolbar_common"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="@dimen/size_for_5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/size_for_20dp"
+                android:text="SmartBCA"
+                android:textColor="@color/colorBlueBCA"
+                android:textSize="@dimen/size_for_20sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="@dimen/size_for_15dp"
+                android:layout_height="@dimen/size_for_15dp"
+                android:background="@color/colorBlueBCA" />
+        </LinearLayout>
+    </Toolbar>
+</com.google.android.material.appbar.AppBarLayout>

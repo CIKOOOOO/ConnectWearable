@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.wear.widget.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlueBCA"
+    tools:context=".ui.qrku.QRActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/size_for_5dp"
+            android:text="QRKu"
+            android:textColor="@color/white_palette" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/size_for_20dp"
+            android:layout_marginTop="@dimen/size_for_5dp"
+            android:layout_marginEnd="@dimen/size_for_20dp"
+            android:text="Andrew Abednego Gunawan"
+            android:textAlignment="center"
+            android:textColor="@color/white_palette"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="@dimen/size_for_120dp"
+            android:layout_height="@dimen/size_for_120dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/size_for_5dp"
+            android:background="@drawable/qr" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/size_for_20dp"
+            android:layout_marginTop="@dimen/size_for_5dp"
+            android:layout_marginEnd="@dimen/size_for_20dp"
+            android:text="5271517891"
+            android:textAlignment="center"
+            android:textColor="@color/white_palette"
+            android:textSize="@dimen/size_for_12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</androidx.wear.widget.BoxInsetLayout>

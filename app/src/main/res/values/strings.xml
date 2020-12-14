@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">ConnectWearable</string>
+
+    <string name="confirmation">Konfirmasi</string>
+    <string name="yes">Ya</string>
+    <string name="no">Tidak</string>
+    <string name="from_account_number">Dari Rekening:</string>
+    <string name="make_sure_saldo_available">Pastikan saldo rekening tersedia saat penarikan tunai di ATM pecahan 50,000 maupun 100,000</string>
+    <string name="pair_with_smartwatch">Pairing dengan smartwatch</string>
+    <string name="no_pairing">Belum terdapat smartwatch yang tersambung dengan aplikasi m-BCA</string>
+    <string name="pair_now">Sambung Sekarang</string>
+    <string name="remove_smartwatch">Hapus Smartwatch</string>
+    <string name="connected_devices">List device yang tersambung dengan smartwatch:</string>
+    <string name="max_connected_devices">Maksimal smartwatch yang bisa disambungkan adalah 1 device.</string>
+    <string name="back">Kembali</string>
+    <string name="authenticate_code">Kode Autentikasi</string>
+    <string name="authenticate_code_warning">Mohon jangan sebarkan kode autentikasi kepada orang lain.\n\nKode autentikasi hanya bisa digunakan <b>satu</b> kali.</string>
+    <string name="warning_info_remove">Apakah Anda yakin untuk menghapus smartwatch dari aplikasi m-BCA?</string>
+
+    <string name="pref_file">pref_file</string>
+    <string name="pref_login_status">pref_login_status</string>
+    <string name="pref_user_id">user_id</string>
+    <string name="pref_smartwatch_nodes_id">smartwatch_nodes_id</string>
+    <string name="pref_authenticate_id">authenticate_id</string>
+</resources>
