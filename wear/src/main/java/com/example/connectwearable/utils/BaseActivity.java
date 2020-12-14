@@ -24,7 +24,7 @@ public class BaseActivity extends FragmentActivity implements AmbientModeSupport
     /**
      * Customizes appearance for Ambient mode. (We don't do anything minus default.)
      */
-    private class MyAmbientCallback extends AmbientModeSupport.AmbientCallback {
+    private static class MyAmbientCallback extends AmbientModeSupport.AmbientCallback {
         /**
          * Prepares the UI for ambient mode.
          */

@@ -9,8 +9,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.connectwearable.R;
 import com.example.connectwearable.ui.tariktunai.confirmation.ConfirmationTarikTunai;
+import com.example.connectwearable.utils.BaseActivity;
 
-public class MainTarikTunai extends AppCompatActivity implements View.OnClickListener {
+public class MainTarikTunai extends BaseActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

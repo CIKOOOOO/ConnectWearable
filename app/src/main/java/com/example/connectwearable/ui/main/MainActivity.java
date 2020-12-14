@@ -11,12 +11,13 @@ import android.widget.EditText;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.WorkerThread;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.connectwearable.R;
 import com.example.connectwearable.model.Event;
 import com.example.connectwearable.ui.smartbca.main.MainSmartBCA;
 import com.example.connectwearable.ui.tariktunai.main.MainTarikTunai;
+import com.example.connectwearable.utils.BaseActivity;
+import com.example.connectwearable.utils.Constant;
 import com.example.connectwearable.utils.Utils;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.Tasks;
@@ -29,6 +30,8 @@ import com.google.android.gms.wearable.MessageEvent;
 import com.google.android.gms.wearable.Node;
 import com.google.android.gms.wearable.Wearable;
 import com.google.gson.Gson;
+import com.here.oksse.OkSse;
+import com.here.oksse.ServerSentEvent;
 
 import java.util.Collection;
 import java.util.HashSet;
@@ -36,7 +39,12 @@ import java.util.List;
 import java.util.Random;
 import java.util.concurrent.ExecutionException;
 
-public class MainActivity extends AppCompatActivity implements DataClient.OnDataChangedListener, View.OnClickListener, MessageClient.OnMessageReceivedListener, CapabilityClient.OnCapabilityChangedListener {
+import okhttp3.MultipartBody;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
+
+public class MainActivity extends BaseActivity implements DataClient.OnDataChangedListener, View.OnClickListener, MessageClient.OnMessageReceivedListener, CapabilityClient.OnCapabilityChangedListener {
 
     private static final String TAG = MainActivity.class.getSimpleName();
     private static final String START_ACTIVITY_PATH = "/start-activity";
@@ -45,6 +53,8 @@ public class MainActivity extends AppCompatActivity implements DataClient.OnData
     private static final String TRANSACTION_CODE = "/transaction_code";
 
     private EditText etData;
+
+    private ServerSentEvent sse;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

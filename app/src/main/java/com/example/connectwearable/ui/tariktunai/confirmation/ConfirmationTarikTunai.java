@@ -14,14 +14,15 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.WorkerThread;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.connectwearable.R;
 import com.example.connectwearable.model.Event;
 import com.example.connectwearable.model.Response;
 import com.example.connectwearable.model.TarikTunai;
+import com.example.connectwearable.utils.BaseActivity;
 import com.example.connectwearable.utils.Utils;
+import com.example.connectwearable.utils.dialog.RemoveSmartwatchDialog;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.Tasks;
@@ -43,7 +44,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ExecutionException;
 
-public class ConfirmationTarikTunai extends AppCompatActivity implements View.OnClickListener, IConfirmationCallback, DataClient.OnDataChangedListener, MessageClient.OnMessageReceivedListener, CapabilityClient.OnCapabilityChangedListener {
+public class ConfirmationTarikTunai extends BaseActivity implements View.OnClickListener, IConfirmationCallback, DataClient.OnDataChangedListener, MessageClient.OnMessageReceivedListener, CapabilityClient.OnCapabilityChangedListener, RemoveSmartwatchDialog.onClick {
 
     public static final String PARCEL_DATA = "parcel_data";
 
@@ -55,6 +56,7 @@ public class ConfirmationTarikTunai extends AppCompatActivity implements View.On
     private TextView tvNominal;
     private ConfirmationViewModel viewModel;
     private CheckBox checkBox;
+    private RemoveSmartwatchDialog smartwatchDialog;
 
     private double nominal;
 
@@ -84,7 +86,6 @@ public class ConfirmationTarikTunai extends AppCompatActivity implements View.On
             tvNominal.setText(Utils.priceFormat(nominal));
         }
 
-
         btnOk.setOnClickListener(this);
         btnCancel.setOnClickListener(this);
     }
@@ -94,7 +95,7 @@ public class ConfirmationTarikTunai extends AppCompatActivity implements View.On
         switch (v.getId()) {
             case R.id.btn_ok_tarik_tunai:
                 if (checkBox.isChecked()) {
-                    showNodes(CAPABILITY_1_NAME, CAPABILITY_2_NAME);
+                    showNodes(CAPABILITY_1_NAME);
                 } else
                     viewModel.tarikTunai(nominal, "123123", "5271517891");
                 break;
@@ -154,6 +155,25 @@ public class ConfirmationTarikTunai extends AppCompatActivity implements View.On
     private void sendData(String data) {
         StartWearableActivity startWearableActivity = new StartWearableActivity();
         startWearableActivity.execute(data);
+    }
+
+    @Override
+    public void onPositiveButton() {
+//        if (smartwatchDialog != null && smartwatchDialog.getTag() != null) {
+//            Log.e("asd", "positif");
+//            smartwatchDialog.dismiss();
+//        }
+        viewModel.tarikTunai(nominal, "123123", "5271517891");
+    }
+
+    @Override
+    public void onNegativeButton() {
+//        Log.e("asd", "negatif butt");
+//        smartwatchDialog.dismiss();
+//        if (smartwatchDialog != null) {
+//            Log.e("asd", "negatif");
+//            smartwatchDialog.dismiss();
+//        }
     }
 
     private class StartWearableActivity extends AsyncTask<String, Void, Void> {
@@ -242,11 +262,15 @@ public class ConfirmationTarikTunai extends AppCompatActivity implements View.On
                         : TextUtils.join(",", nodesList)));
 
         if (nodesList.size() == 0) {
+            smartwatchDialog = new RemoveSmartwatchDialog(this, getString(R.string.smartwatch_not_connected));
+//            smartwatchDialog.show(getSupportFragmentManager(), "");
             Toast.makeText(this, "Tidak ada device yang tersambung", Toast.LENGTH_SHORT).show();
         } else if (nodesList.size() > 1) {
+            smartwatchDialog = new RemoveSmartwatchDialog(this, getString(R.string.smartwatch_not_connected));
+            smartwatchDialog.show(getSupportFragmentManager(), "");
             Toast.makeText(this, "Device yang terkoneksi hanya boleh 1 device", Toast.LENGTH_SHORT).show();
         } else {
-            Log.e("asd", "this is else");
+            Log.e("asd", "hello darkness my old friend");
             viewModel.tarikTunai(nominal, "123123", "5271517891");
         }
     }

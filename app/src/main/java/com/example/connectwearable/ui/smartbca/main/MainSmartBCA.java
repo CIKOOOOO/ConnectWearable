@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.lifecycle.ViewModelProvider;
 
@@ -85,7 +84,7 @@ public class MainSmartBCA extends BaseActivity implements View.OnClickListener, 
                 startActivity(intent);
                 break;
             case R.id.btn_remove_smartbca:
-                smartwatchDialog = new RemoveSmartwatchDialog(this);
+                smartwatchDialog = new RemoveSmartwatchDialog(this, getString(R.string.warning_info_remove));
                 smartwatchDialog.show(getSupportFragmentManager(), "");
                 break;
         }

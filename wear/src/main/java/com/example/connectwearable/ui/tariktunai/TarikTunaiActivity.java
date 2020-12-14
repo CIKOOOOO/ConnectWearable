@@ -50,8 +50,6 @@ public class TarikTunaiActivity extends BaseActivity implements DataClient.OnDat
         tvStatus = findViewById(R.id.tv_status_main);
         slideToActView = findViewById(R.id.slide_main);
 
-        AmbientModeSupport.attach(this);
-
         Intent intent = getIntent();
         if (intent.hasExtra(PARCEL_DATA)) {
             String parcelData = intent.getStringExtra(PARCEL_DATA);

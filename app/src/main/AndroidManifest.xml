@@ -16,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.smartbca.registdevice.authenticatedevice.AuthenticateDeviceActivity"></activity>
+        <activity android:name=".ui.smartbca.registdevice.authenticatedevice.AuthenticateDeviceActivity"/>
         <activity android:name=".ui.smartbca.registdevice.listdevice.ListDevice" />
         <activity android:name=".ui.smartbca.main.MainSmartBCA" />
         <activity android:name=".ui.tariktunai.confirmation.ConfirmationTarikTunai" />

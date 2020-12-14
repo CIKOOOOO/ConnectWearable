@@ -16,6 +16,7 @@
     <string name="authenticate_code">Kode Autentikasi</string>
     <string name="authenticate_code_warning">Mohon jangan sebarkan kode autentikasi kepada orang lain.\n\nKode autentikasi hanya bisa digunakan <b>satu</b> kali.</string>
     <string name="warning_info_remove">Apakah Anda yakin untuk menghapus smartwatch dari aplikasi m-BCA?</string>
+    <string name="smartwatch_not_connected">Device smartwatch tidak tersambung. Apakah Anda ingin melanjutkan transaksi?</string>
 
     <string name="pref_file">pref_file</string>
     <string name="pref_login_status">pref_login_status</string>

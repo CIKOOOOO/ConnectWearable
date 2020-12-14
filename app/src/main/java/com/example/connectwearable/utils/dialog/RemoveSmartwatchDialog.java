@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -18,6 +19,8 @@ import com.example.connectwearable.R;
 
 
 public class RemoveSmartwatchDialog extends DialogFragment implements View.OnClickListener {
+
+    private String title;
 
     @Override
     public void onClick(View v) {
@@ -39,8 +42,9 @@ public class RemoveSmartwatchDialog extends DialogFragment implements View.OnCli
 
     private onClick onClick;
 
-    public RemoveSmartwatchDialog(RemoveSmartwatchDialog.onClick onClick) {
+    public RemoveSmartwatchDialog(RemoveSmartwatchDialog.onClick onClick, String title) {
         this.onClick = onClick;
+        this.title = title;
     }
 
     @NonNull
@@ -72,6 +76,8 @@ public class RemoveSmartwatchDialog extends DialogFragment implements View.OnCli
         super.onViewCreated(view, savedInstanceState);
         Button btnYes = view.findViewById(R.id.btn_yes_remove_dialog);
         Button btnNo = view.findViewById(R.id.btn_no_remove_dialog);
+        TextView tvTitle = view.findViewById(R.id.tv_title_dialog);
+        tvTitle.setText(title);
         btnYes.setOnClickListener(this);
         btnNo.setOnClickListener(this);
     }
